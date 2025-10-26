@@ -1,7 +1,14 @@
-const TARGET_GRADE = 700
-
 function refreshGrades() {
     let currFinalGrade = 0
+
+    let final = document.getElementById("finalGrade")
+
+    final.value = parseInt(final.value);
+
+    if(parseInt(final.value) > 100) final.value = 100;
+    if(parseInt(final.value) < 0) final.value = 0;
+
+    let targetGrade = parseInt(final.value) * 10;
 
     let grades = [
         document.getElementById("firstGrade"),
@@ -37,6 +44,10 @@ function refreshGrades() {
     for(let currGrade of grades) {
         console.log(currBimesters)
         console.log(currFinalGrade)
-        currGrade.placeholder = Math.ceil((TARGET_GRADE - currFinalGrade) / currBimVal)
+        currGrade.placeholder = Math.ceil((targetGrade - currFinalGrade) / currBimVal)
+    }
+
+    if(currBimVal === 0) {
+        final.value = currFinalGrade / 10;
     }
 }
