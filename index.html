@@ -1,1 +1,60 @@
-console.log('Happy developing ✨')
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>calc</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="src/refreshGrades.js"></script>
+</head>
+
+<body>
+    <div>
+        <div style="display: flex; justify-content: center;">
+            <h1 style="padding-bottom:10px">calc</h1>
+        </div>
+
+        <div class="gradeBox">
+        <label for="firstGrade">1º Bimestre:</label>
+            <input
+                    type="number"
+                    id="firstGrade"
+                    min="0" max="100"
+                    placeholder="70"
+                    onchange="refreshGrades()">
+        </div>
+
+        <div class="gradeBox">
+            <label for="secondGrade">2º Bimestre:</label>
+            <input
+                    type="number"
+                    id="secondGrade"
+                    min="0" max="100"
+                    placeholder="70"
+                    onchange="refreshGrades()">
+        </div>
+
+        <div class="gradeBox">
+            <label for="thirdGrade">3º Bimestre:</label>
+            <input
+                    type="number"
+                    id="thirdGrade"
+                    min="0" max="100"
+                    placeholder="70"
+                    onchange="refreshGrades()">
+        </div>
+
+        <div class="gradeBox">
+            <label for="fourthGrade">4º Bimestre:</label>
+            <input
+                    type="number"
+                    id="fourthGrade"
+                    min="0" max="100"
+                    placeholder="70"
+                    onchange="refreshGrades()">
+        </div>
+    </div>
+</body>
+
+</html>

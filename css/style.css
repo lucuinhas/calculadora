@@ -1,0 +1,26 @@
+body {
+    background-color: #1e1f23;
+    display: flex;
+    justify-content: center;
+}
+
+label, p, h1, h2, h3, h4, h5, h6, div {
+    font-family: Futura, sans-serif;
+    color: white;
+
+    padding: 8px;
+    margin: 0;
+}
+
+.gradeBox {
+    padding: 5px
+}
+
+input {
+    font-family: Futura, sans-serif;
+    color: black;
+}
+
+input::placeholder {
+    color: darkgray;
+}
