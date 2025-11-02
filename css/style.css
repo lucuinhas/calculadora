@@ -4,7 +4,8 @@ body {
     justify-content: center;
 }
 
-label, p, h1, h2, h3, h4, h5, h6, div {
+
+label, p, h1, h2, h3, h4, h5, h6, div, a {
     font-family: Futura, sans-serif;
     color: white;
 
@@ -12,13 +13,18 @@ label, p, h1, h2, h3, h4, h5, h6, div {
 }
 
 .gradeBox {
-    padding: 5px
+    padding: 5px;
 }
 
 details {
     display: flex;
     width: 100%;
     justify-content: center;
+    flex-direction: column;
+}
+
+summary {
+    padding: 8px;
 }
 
 .gradeBox {
@@ -34,4 +40,11 @@ input {
 
 input::placeholder {
     color: darkgray;
+}
+
+#tutorialLink {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #56A9B6;
 }

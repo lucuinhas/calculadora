@@ -28,8 +28,10 @@ function refreshAverages(bimNumber) {
     } else {
         refreshGrades(bimNumber);
 
-        average.value = parseInt(average.value);
-        average.value = Math.min(100, Math.max(0, average.value));
+        if(average.value) {
+            average.value = parseInt(average.value);
+            average.value = Math.min(100, Math.max(0, average.value));
+        }
     }
 
     let currWeights = 0;

@@ -30,9 +30,8 @@ function refreshGrades(bimNumber) {
 
         let targetAverage;
 
-        if(!bimester["average"].value) bimester["average"].value = bimester["average"].placeholder;
-
-        targetAverage = parseInt(bimester["average"].value)
+        if(!bimester["average"].value) targetAverage = parseInt(bimester["average"].placeholder)
+        else targetAverage = parseInt(bimester["average"].value)
 
         for(let i = 0; i < totalGrades; i++) {
             if(!bimester["grades"][i].value) {
