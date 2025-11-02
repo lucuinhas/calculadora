@@ -10,10 +10,6 @@ function getBimester(bimester) {
     }
 }
 
-function getAverage(bimester) {
-    return document.getElementById("average" + bimester);
-}
-
 function getAllAverages() {
     return [
         document.getElementById("average1"),
@@ -26,5 +22,3 @@ function getAllAverages() {
 function getFinal() {
     return document.getElementById("finalGrade");
 }
-
-let weights = [1, 2, 3, 4]

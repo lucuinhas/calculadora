@@ -2,6 +2,10 @@ body {
     background-color: #1e1f23;
     display: flex;
     justify-content: center;
+    max-width: 100%;
+    height: 100%;
+
+    font-size: 2.5vh;
 }
 
 
@@ -12,8 +16,21 @@ label, p, h1, h2, h3, h4, h5, h6, div, a {
     padding: 8px;
 }
 
+#majorContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 .gradeBox {
-    padding: 5px;
+    padding: 8px;
+    width: fit-content;
+    background-color: #2f3137;
+    border-radius: 8px;
+    margin: 8px;
 }
 
 details {
@@ -24,18 +41,13 @@ details {
 }
 
 summary {
-    padding: 8px;
-}
-
-.gradeBox {
-    background-color: #2f3137;
-    border-radius: 8px;
-    margin: 8px;
+    padding: 4px;
 }
 
 input {
     font-family: Futura, sans-serif;
     color: black;
+    font-size: 2.5vh;
 }
 
 input::placeholder {
@@ -48,3 +60,4 @@ input::placeholder {
     right: 5px;
     color: #56A9B6;
 }
+
