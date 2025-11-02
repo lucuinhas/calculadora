@@ -9,11 +9,22 @@ label, p, h1, h2, h3, h4, h5, h6, div {
     color: white;
 
     padding: 8px;
-    margin: 0;
 }
 
 .gradeBox {
     padding: 5px
+}
+
+details {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.gradeBox {
+    background-color: #2f3137;
+    border-radius: 8px;
+    margin: 8px;
 }
 
 input {

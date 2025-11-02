@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>calc</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="src/index.js"></script>
+    <script src="src/refreshAverages.js"></script>
     <script src="src/refreshGrades.js"></script>
+    <script src="src/refreshFinal.js"></script>
 </head>
 
 <body>
@@ -16,43 +19,203 @@
         </div>
 
         <div class="gradeBox">
-        <label for="firstGrade">1º Bimestre:</label>
-            <input
-                    type="number"
-                    id="firstGrade"
-                    min="0" max="100"
-                    placeholder="70"
-                    onchange="refreshGrades()">
+            <details>
+                <summary>
+                    <label for="average1">1º Bimestre:</label>
+                    <input
+                            type="number"
+                            id="average1"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshAverages(1)">
+                </summary>
+                <div>
+                    <label for="bim1G1">1ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim1G1"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(1)">
+                </div>
+                <div>
+                    <label for="bim1G2">2ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim1G2"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(1)">
+                </div>
+                <div>
+                    <label for="bim1G3">3ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim1G3"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(1)">
+                </div>
+                <div>
+                    <label for="bim1G4">4ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim1G4"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(1)">
+                </div>
+            </details>
         </div>
 
         <div class="gradeBox">
-            <label for="secondGrade">2º Bimestre:</label>
-            <input
-                    type="number"
-                    id="secondGrade"
-                    min="0" max="100"
-                    placeholder="70"
-                    onchange="refreshGrades()">
+            <details>
+                <summary>
+                    <label for="average2">2º Bimestre:</label>
+                    <input
+                            type="number"
+                            id="average2"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshAverages(2)">
+                </summary>
+                <div>
+                    <label for="bim2G1">1ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim2G1"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(2)">
+                </div>
+                <div>
+                    <label for="bim2G2">2ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim2G2"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(2)">
+                </div>
+                <div>
+                    <label for="bim2G3">3ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim2G3"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(2)">
+                </div>
+                <div>
+                    <label for="bim2G4">4ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim2G4"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(2)">
+                </div>
+            </details>
         </div>
 
         <div class="gradeBox">
-            <label for="thirdGrade">3º Bimestre:</label>
-            <input
-                    type="number"
-                    id="thirdGrade"
-                    min="0" max="100"
-                    placeholder="70"
-                    onchange="refreshGrades()">
+            <details>
+                <summary>
+                    <label for="average3">3º Bimestre:</label>
+                    <input
+                            type="number"
+                            id="average3"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshAverages(3)">
+                </summary>
+                <div>
+                    <label for="bim3G1">1ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim3G1"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(3)">
+                </div>
+                <div>
+                    <label for="bim3G2">2ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim3G2"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(3)">
+                </div>
+                <div>
+                    <label for="bim3G3">3ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim3G3"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(3)">
+                </div>
+                <div>
+                    <label for="bim3G4">4ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim3G4"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(3)">
+                </div>
+            </details>
         </div>
 
         <div class="gradeBox">
-            <label for="fourthGrade">4º Bimestre:</label>
-            <input
-                    type="number"
-                    id="fourthGrade"
-                    min="0" max="100"
-                    placeholder="70"
-                    onchange="refreshGrades()">
+            <details>
+                <summary>
+                    <label for="average4">4º Bimestre:</label>
+                    <input
+                            type="number"
+                            id="average4"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshAverages(4)">
+                </summary>
+                <div>
+                    <label for="bim4G1">1ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim4G1"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(4)">
+                </div>
+                <div>
+                    <label for="bim4G2">2ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim4G2"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(4)">
+                </div>
+                <div>
+                    <label for="bim4G3">3ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim4G3"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(4)">
+                </div>
+                <div>
+                    <label for="bim4G4">4ª nota:</label>
+                    <input
+                            type="number"
+                            id="bim4G4"
+                            min="0" max="100"
+                            placeholder="70"
+                            onchange="refreshGrades(4)">
+                </div>
+            </details>
         </div>
 
         <div class="gradeBox">
@@ -62,7 +225,7 @@
                     id="finalGrade"
                     min="0" max="100"
                     value="70"
-                    onchange="refreshGrades()">
+                    onchange="refreshFinal()">
         </div>
     </div>
 </body>

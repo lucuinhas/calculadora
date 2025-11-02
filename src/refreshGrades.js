@@ -1,53 +1,45 @@
-function refreshGrades() {
-    let currFinalGrade = 0
+function refreshGrades(bimNumber) {
+    let bimester = getBimester(bimNumber);
 
-    let final = document.getElementById("finalGrade")
+    for(let grade of bimester["grades"]) {
+        grade.value = parseInt(grade.value);
+        grade.value = Math.min(100, Math.max(0, parseInt(grade.value)));
+    }
 
-    final.value = parseInt(final.value);
+    if(bimester["grades"][0].value && bimester["grades"][1].value && bimester["grades"][2].value) {
+        refreshAverages(bimNumber)
+    } else {
+        //being set mode: will be set by the average, instead of the opposite
+        let currFinalGrade = 0
+        let gradeCount = 0;
 
-    if(parseInt(final.value) > 100) final.value = 100;
-    if(parseInt(final.value) < 0) final.value = 0;
-
-    let targetGrade = parseInt(final.value) * 10;
-
-    let grades = [
-        document.getElementById("firstGrade"),
-        document.getElementById("secondGrade"),
-        document.getElementById("thirdGrade"),
-        document.getElementById("fourthGrade"),
-    ]
-
-    let currBimesters = []
-
-    for(let i of grades.keys()) {
-        let currGrade = grades[i];
-
-        if(currGrade.value.trim() !== '') {
-            currGrade.value = parseInt(currGrade.value);
-
-            if(parseInt(currGrade.value) > 100) currGrade.value = 100;
-            if(parseInt(currGrade.value) < 0) currGrade.value = 0;
-
-            currFinalGrade += parseInt(currGrade.value) * (i + 1);
+        for(grade of bimester["grades"]) {
+            if(grade.value) {
+                gradeCount++;
+                currFinalGrade += parseInt(grade.value);
+            }
         }
-        else {
-            currBimesters.push(i + 1)
+
+        let totalGrades = 3
+
+        if(!bimester["grades"][3].value) {
+            bimester["grades"][3].placeholder = '';
+        } else {
+            totalGrades = 4;
         }
-    }
 
-    let currBimVal = 0
+        let targetAverage;
 
-    for(let i of currBimesters) {
-        currBimVal += i
-    }
+        if(!bimester["average"].value) bimester["average"].value = bimester["average"].placeholder;
 
-    for(let currGrade of grades) {
-        console.log(currBimesters)
-        console.log(currFinalGrade)
-        currGrade.placeholder = Math.ceil((targetGrade - currFinalGrade) / currBimVal)
-    }
+        targetAverage = parseInt(bimester["average"].value)
 
-    if(currBimVal === 0) {
-        final.value = currFinalGrade / 10;
+        for(let i = 0; i < totalGrades; i++) {
+            if(!bimester["grades"][i].value) {
+                bimester["grades"][i].placeholder = Math.ceil((
+                    targetAverage * totalGrades - currFinalGrade
+                ) / (totalGrades - gradeCount));
+            }
+        }
     }
 }
